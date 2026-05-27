@@ -3,6 +3,7 @@ import { OrdersContext } from "../../context/ordersContext/OrdersContext";
 import { PaymentContext } from "../../context/paymentContext";
 
 export default function CheckoutSteps({ bookingData }) {
+  const { orderList } = useContext(OrdersContext);
   const { paymentState, setPaymentMethod: setPaymentMethodContext } = useContext(PaymentContext);
 
   // Address management
